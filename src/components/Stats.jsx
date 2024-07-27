@@ -1,5 +1,5 @@
 import React from "react";
-import { stats } from "../constants";
+import { stats } from "../constants/index.js";
 import styles from "../styles";
 
 const Stats = () => (
