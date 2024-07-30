@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {close,logo,menu} from '../assets'
 import {navLinks} from '../constants'
+import SuprSendInbox from '@suprsend/react-inbox'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Navbar = () => {
   const [toggle,setToggle] = useState(false)
@@ -22,6 +24,14 @@ const Navbar = () => {
       </li>
     ))}
   </ul>
+  <div className='ml-5'>
+  <SuprSendInbox 
+  themeType="dark"
+  workspaceKey= "SS.WSS.WhBWdaRqddXa_5w5_9y5a8jKUMpjZeHL8uSHQZ4Y"
+  subscriberId= "auzLVvOBSp9PEBqUoqe0"
+  distinctId= "<distinct_id>"
+/>
+  </div>
 
   <div className='sm:hidden flex flex-1 justify-end items-center'>
     <img src={toggle ? close:menu}
